@@ -286,7 +286,7 @@ aws events put-targets \
 ### **Environment Variables**
 ```env
 # Lambda Environment Variables
-SECRET_KEY='your-super-strong-and-secret-jwt-key'
+SECRET_KEY='your-super-strong-and-secret'
 DYNAMODB_TABLE_NAME='food-inventory-table'
 AWS_REGION='us-east-1'
 SNS_TOPIC_ARN='arn:aws:sns:us-east-1:123456789012:food-expiration-notifications'
