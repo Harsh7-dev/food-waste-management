@@ -1,0 +1,30 @@
+{
+    "dev": {
+        "app_function": "app.app",
+        "aws_region": "us-east-1",
+        "project_name": "food-waste-management-backend",
+        "runtime": "python3.9",
+        "s3_bucket": "zappa-foodfeeder-deploy-us-east-1",
+        "iam_policy_statements": [
+            {
+                "Effect": "Allow",
+                "Action": [
+                    "dynamodb:PutItem",
+                    "dynamodb:GetItem",
+                    "dynamodb:Query",
+                    "dynamodb:DeleteItem",
+                    "dynamodb:Scan"
+                ],
+                "Resource": "arn:aws:dynamodb:us-east-1:579273601939:table/food-inventory-table"
+            },
+            {
+                "Effect": "Allow",
+                "Action": [
+                    "sns:Subscribe",
+                    "sns:Publish"
+                ],
+                "Resource": "arn:aws:sns:us-east-1:579273601939:food-expiration-notifications"
+            }
+        ]
+    }
+}

@@ -1,0 +1,8 @@
+Flask
+boto3
+werkzeug
+Zappa
+python-dotenv
+bcrypt
+PyJWT
+Flask-Cors 
